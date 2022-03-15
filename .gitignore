@@ -102,3 +102,21 @@ dist
 
 # TernJS port file
 .tern-port
+
+docDist
+package-lock.json
+yarn.lock
+.DS_Store
+.vscode
+.idea
+*.swp
+/fonts
+/site
+/package
+lib
+es
+*.tsbuildinfo
+pnpm-lock.yaml
+web-types.json
+~*
+.pnpm-debug.log

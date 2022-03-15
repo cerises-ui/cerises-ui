@@ -1,2 +1,2 @@
 # cerises-ui
-A modern solidjs based UI library ~ it is very lightweight!
+一个现代的基于solidjs的UI库~它是非常轻量级的!
