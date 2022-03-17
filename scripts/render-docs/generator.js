@@ -45,14 +45,12 @@ const getAll = function (dir) {
       return `{ path: '${file.substring(
         0,
         file.lastIndexOf('.'),
-      )}', component: lazy(() => import('${file}')), type: 'file'}`;
+      )}', component: lazy(() => import('${file}'))}`;
     });
 
-    if (!Array.isArray(children) && !children.length > 0) children = `[]`;
-
-    var result = `{ path: '${path.basename(dir)}', children: ${children} }`;
+    var result = `{ path: '${path.basename(dir)}', children: [${children}] }`;
     return result; //返回数据
   }
   filesNameArr.push(readdirs(dir));
-  return filesNameArr;
+  return `[${filesNameArr.join(', ')}]`;
 };
