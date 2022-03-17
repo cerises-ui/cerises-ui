@@ -1,38 +1,43 @@
-import { defineConfig } from 'vite'
-import solidPlugin from 'vite-plugin-solid'
-import WindiCSS from 'vite-plugin-windicss'
+import { defineConfig } from 'vite';
+import solidPlugin from 'vite-plugin-solid';
+import WindiCSS from 'vite-plugin-windicss';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': 'src',
+    },
+  },
   plugins: [
     solidPlugin(),
     WindiCSS({
       scan: {
-        fileExtensions: ['html', 'js', 'ts', 'jsx', 'tsx']
-      }
-    })
+        fileExtensions: ['html', 'js', 'ts', 'jsx', 'tsx'],
+      },
+    }),
   ],
   test: {
     environment: 'jsdom',
     globals: true,
     transformMode: {
-      web: [/\.[jt]sx?$/]
+      web: [/\.[jt]sx?$/],
     },
     setupFiles: './setupVitest.ts',
     // solid needs to be inline to work around
     // a resolution issue in vitest:
     deps: {
-      inline: [/solid-js/]
+      inline: [/solid-js/],
     },
     // if you have few tests, try commenting one
     // or both out to improve performance:
     threads: false,
-    isolate: false
+    isolate: false,
   },
   build: {
     target: 'esnext',
-    polyfillDynamicImport: false
+    polyfillDynamicImport: false,
   },
   resolve: {
-    conditions: ['development', 'browser']
-  }
-})
+    conditions: ['development', 'browser'],
+  },
+});

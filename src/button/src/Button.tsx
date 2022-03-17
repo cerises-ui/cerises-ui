@@ -4,5 +4,9 @@ export type ButtonProps = {
 };
 
 export default () => {
-  return <></>;
+  return (
+    <>
+      <button></button>
+    </>
+  );
 };
