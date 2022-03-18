@@ -111,7 +111,6 @@ yarn.lock
 .idea
 *.swp
 /fonts
-/site
 /package
 lib
 es

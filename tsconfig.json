@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "paths": {
-      "@": ["./src"]
+      "@": ["src"],
+      "@/*": ["src/*"],
+      "site/*": ["site/*"],
+      "docs/*": ["docs/*"],
     },
     "target": "ESNext",
     "module": "ESNext",
@@ -10,7 +14,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"],
+    "types": ["vite/client", "solid-jsx/types"],
     "noEmit": true,
     "isolatedModules": true
   }

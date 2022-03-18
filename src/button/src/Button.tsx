@@ -6,7 +6,7 @@ export type ButtonProps = {
 export default () => {
   return (
     <>
-      <button></button>
+      <button class="p-4 bg-red-900 rounded-3xl">123123</button>
     </>
   );
 };

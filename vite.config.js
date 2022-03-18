@@ -1,14 +1,25 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import WindiCSS from 'vite-plugin-windicss';
+import mdx from '@mdx-js/rollup';
+import remarkGfm from 'remark-gfm';
+import path from 'path';
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': 'src',
-    },
+  alias: {
+    '@': path.resolve('src'),
+    site: path.resolve('site'),
+    docs: path.resolve('docs'),
   },
+  // resolve: {
+  //   alias: {
+  //     '@': path.resolve('src'),
+  //     site: path.resolve('site'),
+  //     docs: path.resolve('docs'),
+  //   },
+  // },
   plugins: [
+    mdx({ jsxImportSource: 'solid-jsx', remarkPlugins: [remarkGfm] }),
     solidPlugin(),
     WindiCSS({
       scan: {
