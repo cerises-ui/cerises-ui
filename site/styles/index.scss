@@ -1,0 +1,21 @@
+@font-face {
+  font-family: v-sans;
+  font-weight: 400;
+  src: url(site/assets/Inter-Regular.woff2);
+}
+@font-face {
+  font-family: v-sans;
+  font-weight: 500;
+  src: url(site/assets/Inter-Medium.woff2);
+}
+@font-face {
+  font-family: v-mono;
+  font-weight: 400;
+  src: url(site/assets/FiraCode-Regular.woff2);
+}
+
+body {
+  font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 14px;
+}

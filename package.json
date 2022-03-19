@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "render-docs": "node ./scripts/render-docs/index.js"
+    "render-docs-routes": "node ./scripts/render-docs-routes/index.js"
   },
   "keywords": [
     "cerises-ui",
