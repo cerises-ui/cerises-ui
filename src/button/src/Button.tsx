@@ -1,12 +1,32 @@
-export type ButtonProps = {
-  loading: Boolean;
-  disabled: Boolean;
-};
+import { createEffect, children, createMemo } from 'solid-js';
 
-export default () => {
+import '../styles/index.scss';
+
+export default (props) => {
+  const { disabled } = props;
+
+  const vars = {
+    '--c-button-background': props.background,
+    '--c-button-color': props.color,
+    '--c-button-cursor': 'pointer',
+  };
+
+  if (disabled) {
+    vars['--c-button-cursor'] = 'not-allowed';
+  }
+
+  const cssVars = createMemo(() => vars);
+
   return (
     <>
-      <button class="p-4 bg-red-900 rounded-3xl">123123</button>
+      <button
+        disabled={disabled}
+        class={`c-button${props.class ? ' ' + props.class : ''}`}
+        style={cssVars()}
+      >
+        {cssVars()}
+        {props.children}
+      </button>
     </>
   );
 };
