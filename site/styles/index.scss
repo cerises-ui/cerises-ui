@@ -19,3 +19,8 @@ body {
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 14px;
 }
+
+code {
+  @apply bg-gray-100 px-1 py-1 mx-0.5 rounded text-xs;
+  font-family: v-mono;
+}

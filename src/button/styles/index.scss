@@ -5,20 +5,13 @@
   cursor: var(--c-button-cursor);
   color: var(--c-button-color);
 
+  transition: color 0.2s, background-color 0.2s, opacity 0.2s, border-color 0.2s;
   &:not([disabled]) {
-    &::before {
-      position: absolute;
-      display: block;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.1);
+    &:hover {
+      background-color: var(--c-button-background-hover);
     }
-
-    &:hover:before {
-      content: '';
+    &:active {
+      background-color: var(--c-button-background-pressed);
     }
   }
 }
