@@ -4,6 +4,7 @@ import { commonLight } from '@/theme/common';
 const ThemeContext = createContext();
 
 export function ThemeProvider(props) {
+  // 覆盖主题
   props = mergeProps(commonLight, props);
 
   const [theme] = createSignal(props),
@@ -16,6 +17,6 @@ export function ThemeProvider(props) {
   );
 }
 
-export function useCounter() {
+export function useTheme() {
   return useContext(ThemeContext);
 }

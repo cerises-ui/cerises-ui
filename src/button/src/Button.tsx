@@ -2,10 +2,13 @@ import type { ButtonProps } from './interface';
 import { createEffect, children, createMemo } from 'solid-js';
 import { composite } from 'seemly';
 import { createHoverColor, createPressedColor } from '@/_utils/color';
+import { useTheme } from '@/theme/ThemeProvider';
 
 import '../styles/index.scss';
 
-export default (props: ButtonProps) => {
+export default (props) => {
+  console.log(props);
+
   const { disabled, background } = props;
 
   const vars = {
