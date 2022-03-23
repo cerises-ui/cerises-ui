@@ -1,4 +1,4 @@
-import CButton from './demos/button';
+import CButton from '@/button';
 import CCard from '@/card';
 
 # 按钮 Button
@@ -8,22 +8,26 @@ import CCard from '@/card';
 ## 演示
 
 <CCard class="space-x-2 space-y-2" title="按钮的基本使用">
-  <div>
-    按钮的 `type` 分别为
-    `default`、`tertiary`、`primary`、`info`、`success`、`warning` 和 `error`。
-  </div>
-  <CButton background="#2bc998">Default</CButton>
-  <CButton background="#2bc998" primary>
-    Default
-  </CButton>
-  <CButton background="#2bc998">Default</CButton>
-  <CButton background="#2bc998" disabled>
-    Default
-  </CButton>
-  <CButton background="#2bc998" disabled>
-    Default
-  </CButton>
-  <CButton background="#2bc998" disabled>
-    Default
-  </CButton>
+
+    > 按钮的 `type` 分别为
+    `default`、`primary`、`info`、`success`、`warning` 和 `error`。
+
+  <CButton>Default</CButton>
+  <CButton primary> Primary </CButton>
+  <CButton info>Info</CButton>
+  <CButton success>Success</CButton>
+  <CButton warning>Warning</CButton>
+  <CButton error>Error</CButton>
+</CCard>
+
+<CCard class="mt-4 space-x-2 space-y-2" title="禁用">
+
+  > 给按钮设置 `disabled`
+
+  <CButton disabled>Default</CButton>
+  <CButton disabled primary>Primary</CButton>
+  <CButton disabled info>Info</CButton>
+  <CButton disabled success>Success</CButton>
+  <CButton disabled warning>Warning</CButton>
+  <CButton disabled error>Error</CButton>
 </CCard>

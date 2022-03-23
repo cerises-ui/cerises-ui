@@ -1,11 +1,11 @@
 import CButton from '@/button/index';
 import Theme from '@/theme';
 
-export default () => {
+export default (props) => {
   return (
     <>
       <Theme>
-        <CButton>12311231231223</CButton>
+        <CButton>{props.children}</CButton>
       </Theme>
     </>
   );
