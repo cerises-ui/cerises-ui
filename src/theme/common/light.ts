@@ -2,13 +2,13 @@ import { rgba, composite, scaleColor } from 'seemly';
 import commonVariables from './_common';
 
 const base = {
-  neutralBase: '#FFF',
-  neutralInvertBase: '#000',
-  neutralTextBase: '#000',
-  neutralPopover: '#fff',
-  neutralCard: '#fff',
-  neutralModal: '#fff',
-  neutralBody: '#fff',
+  white: '#FFF',
+  black: '#000',
+  text: '#000',
+  popover: '#fff',
+  card: '#fff',
+  modal: '#fff',
+  body: '#fff',
 
   alpha1: '0.82',
   alpha2: '0.72',
@@ -68,8 +68,8 @@ const base = {
   successSuppl: '#36ad6a',
 };
 
-const baseBackgroundRgb = rgba(base.neutralBase);
-const baseInvertBackgroundRgb = rgba(base.neutralInvertBase);
+const baseBackgroundRgb = rgba(base.white);
+const baseInvertBackgroundRgb = rgba(base.black);
 const overlayPrefix =
   'rgba(' + baseInvertBackgroundRgb.slice(0, 3).join(', ') + ', ';
 function overlay(alpha: string | number) {
@@ -88,7 +88,7 @@ const derived = {
 
   ...commonVariables,
 
-  baseColor: base.neutralBase,
+  baseColor: base.white,
 
   // primary color
   primaryColor: base.primaryDefault,
@@ -116,7 +116,7 @@ const derived = {
   errorColorPressed: base.errorActive,
   errorColorSuppl: base.errorSuppl,
   // text color
-  textColorBase: base.neutralTextBase,
+  textColorBase: base.text,
   textColor1: 'rgb(31, 34, 37)',
   textColor2: 'rgb(51, 54, 57)',
   textColor3: 'rgb(118, 124, 130)',
@@ -160,11 +160,11 @@ const derived = {
   progressRailColor: neutral(base.alphaProgressRail),
   railColor: 'rgb(219, 219, 223)',
 
-  popoverColor: base.neutralPopover,
-  tableColor: base.neutralCard,
-  cardColor: base.neutralCard,
-  modalColor: base.neutralModal,
-  bodyColor: base.neutralBody,
+  popoverColor: base.popover,
+  tableColor: base.card,
+  cardColor: base.card,
+  modalColor: base.modal,
+  bodyColor: base.body,
   tagColor: 'rgb(250, 250, 252)',
   avatarColor: neutral(base.alphaAvatar),
   invertedColor: 'rgb(0, 20, 40)',

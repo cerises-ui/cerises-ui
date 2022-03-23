@@ -24,3 +24,11 @@ code {
   @apply bg-gray-100 px-1 py-1 mx-0.5 rounded text-xs;
   font-family: v-mono;
 }
+
+blockquote {
+  padding: 0 0 0 20px;
+  margin: 15px 0;
+  border-width: 4px;
+  border-style: none none none solid;
+  border-color: #eee;
+}
