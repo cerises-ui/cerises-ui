@@ -5,7 +5,7 @@
       "@": ["src"],
       "@/*": ["src/*"],
       "site/*": ["site/*"],
-      "docs/*": ["docs/*"],
+      "docs/*": ["docs/*"]
     },
     "target": "ESNext",
     "module": "ESNext",
@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client", "solid-jsx/types"],
+    "types": ["vite/client"],
     "noEmit": true,
     "isolatedModules": true
   }
