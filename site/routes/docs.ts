@@ -11,6 +11,19 @@ export default {
           path: 'button',
           component: lazy(() => import('docs/components/button.mdx')),
         },
+        {
+          path: 'card',
+          component: lazy(() => import('docs/components/card.mdx')),
+        },
+      ],
+    },
+    {
+      path: 'installation',
+      children: [
+        {
+          path: 'theme',
+          component: lazy(() => import('docs/installation/theme.mdx')),
+        },
       ],
     },
   ],
