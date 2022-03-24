@@ -13,12 +13,7 @@ const App: Component = () => {
     <>
       <div class="container mx-auto">
         <SiteHeader />
-        <main class="flex divide-x">
-          <div class="w-60 p-4">TODOs</div>
-          <div class="p-4 w-full">
-            <Route />
-          </div>
-        </main>
+        <Route />
       </div>
     </>
   );

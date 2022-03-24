@@ -6,18 +6,19 @@ import remarkGfm from 'remark-gfm';
 import path from 'path';
 
 export default defineConfig({
-  alias: {
-    '@': path.resolve('src'),
-    site: path.resolve('site'),
-    docs: path.resolve('docs'),
-  },
-  // resolve: {
-  //   alias: {
-  //     '@': path.resolve('src'),
-  //     site: path.resolve('site'),
-  //     docs: path.resolve('docs'),
-  //   },
+  // alias: {
+  //   '@': path.resolve('src'),
+  //   site: path.resolve('site'),
+  //   docs: path.resolve('docs'),
   // },
+  resolve: {
+    conditions: ['development', 'browser'],
+    alias: {
+      '@': path.resolve('src'),
+      site: path.resolve('site'),
+      docs: path.resolve('docs'),
+    },
+  },
   plugins: [
     mdx({ jsxImportSource: 'solid-jsx', remarkPlugins: [remarkGfm] }),
     solidPlugin(),
@@ -47,8 +48,5 @@ export default defineConfig({
   build: {
     target: 'esnext',
     polyfillDynamicImport: false,
-  },
-  resolve: {
-    conditions: ['development', 'browser'],
   },
 });
