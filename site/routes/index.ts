@@ -14,7 +14,6 @@ export const routes: RouteDefinition[] = [
     component: lazy(() => import('site/pages/Docs')),
     children: docs.children,
   },
-  // ...docs.children,
   {
     path: '**',
     component: lazy(() => import('site/pages/404')),
