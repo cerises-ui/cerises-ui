@@ -1,45 +1,50 @@
-export type ButtonProps = {
-  /**
-   * button type
-   * @default "default"
-   */
-  type?: ButtonType;
-  /**
-   * button size
-   * @default ""
-   */
-  size?: ButtonSize;
-  /**
-   * disable the button
-   * @default false
-   */
-  disabled?: boolean;
-  /**
-   * determine whether it's loading
-   * @default false
-   */
-  loading?: boolean;
-  /**
-   * determine whether it's a plain button,
-   * @default false
-   */
-  plain?: boolean;
-  /**
-   * determine whether it's a plain button, TODOs: 翻译
-   * @default ""
-   */
-  background?: string;
-  /**
-   * determine whether it's a plain button, TODOs: 翻译
-   * @default ""
-   */
-  color?: string;
-  /**
-   * @default ""
-   */
-  icon?: IconName;
-  onClick?: ButtonOnClickHandler;
-};
+import { ThemeButtonVars } from '../styles/light';
+import { PropsWithChildren } from 'solid-js';
+
+export type ButtonProps = GlobalProps &
+  PropsWithChildren & {
+    theme?: ThemeButtonVars;
+    /**
+     * 按钮类型 button type
+     * @default "default"
+     */
+    type?: ButtonType;
+    /**
+     * 按钮大小 button size
+     * @default ""
+     */
+    size?: ButtonSize;
+    /**
+     * 是否禁用 disable the button
+     * @default false
+     */
+    disabled?: boolean;
+    /**
+     * determine whether it's loading
+     * @default false
+     */
+    loading?: boolean;
+    /**
+     * determine whether it's a plain button,
+     * @default false
+     */
+    plain?: boolean;
+    /**
+     * determine whether it's a plain button, TODOs: 翻译
+     * @default ""
+     */
+    background?: string;
+    /**
+     * determine whether it's a plain button, TODOs: 翻译
+     * @default ""
+     */
+    color?: string;
+    /**
+     * @default ""
+     */
+    icon?: IconName;
+    onClick?: ButtonOnClickHandler;
+  };
 
 export type ButtonType =
   | 'primary'
@@ -47,7 +52,7 @@ export type ButtonType =
   | 'default'
   | 'success'
   | 'warning'
-  | 'danger'
+  | 'error'
   | 'info';
 
 export type ButtonSize = 'small' | 'mini';

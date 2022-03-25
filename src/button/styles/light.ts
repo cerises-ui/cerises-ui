@@ -2,7 +2,7 @@ import { commonLight } from '@/theme/common';
 
 import CerisesTheme from '@/theme/common/cerises-ui';
 
-export default {
+const theme = {
   background: commonLight.baseColor,
   buttonTextColor: commonLight.textColorBase,
   buttonBorderColor: commonLight.borderColor,
@@ -34,3 +34,6 @@ export default {
   errorColorActive: commonLight.errorColorPressed,
   errorColorSuppl: commonLight.errorColorSuppl,
 };
+
+export default theme;
+export type ThemeButtonVars = typeof theme;

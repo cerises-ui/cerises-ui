@@ -1,0 +1,3 @@
+interface GlobalProps {
+  class?: string;
+}
