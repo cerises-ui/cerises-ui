@@ -5,15 +5,60 @@
   @apply px-2.5 py-1.5;
 
   background-color: $button-background;
-  cursor: $button-cursor;
   color: $button-color;
-
   border-width: $border-width;
   border-color: $border-color;
   border-radius: $border-radius;
+  cursor: $button-cursor;
 
   transition: filter 0.2s, background-color 0.2s, opacity 0.2s,
     border-color 0.2s;
+
+  $sizes: 'xs', 'sm', 'md', 'lg', 'xl';
+
+  @each $s in $sizes {
+    $size: index($sizes, $s);
+    &.#{$s} {
+      @extend #{$s};
+    }
+  }
+
+  &.xs {
+    height: $button-xs-height;
+    padding: $button-xs-padding;
+    font-size: $button-xs-font-size;
+  }
+
+  &.sm {
+    height: $button-sm-height;
+    padding: $button-sm-padding;
+    font-size: $button-sm-font-size;
+  }
+
+  &.md {
+    height: $button-md-height;
+    padding: $button-md-padding;
+    font-size: $button-md-font-size;
+  }
+
+  &.lg {
+    height: $button-lg-height;
+    padding: $button-lg-padding;
+    font-size: $button-lg-font-size;
+  }
+
+  &.xs {
+    height: $button-xs-height;
+    padding: $button-xs-padding;
+    font-size: $button-xs-font-size;
+  }
+
+  &.xs {
+    height: $button-xs-height;
+    padding: $button-xs-padding;
+    font-size: $button-xs-font-size;
+  }
+
   &:not([disabled]) {
     &:hover {
       filter: brightness(1.1);

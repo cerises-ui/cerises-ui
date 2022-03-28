@@ -66,21 +66,24 @@ $height-xs: var(--height-xs, $height-base * $hd);
 $height-sm: var(--height-sm, ($height-base + 2) * $hd);
 $height-md: var(--height-md, ($height-base + 4) * $hd);
 $height-lg: var(--height-lg, ($height-base + 6) * $hd);
+$height-xl: var(--height-xl, ($height-base + 8) * $hd);
 
 // 粗字体
 $font-weight-bold: 500;
 
 // 字体大小
-$font-size-xs: 10px * $hd;
-$font-size-sm: 12px * $hd;
-$font-size-md: 14px * $hd;
-$font-size-lg: 16px * $hd;
+$font-xs: 10px * $hd;
+$font-sm: 12px * $hd;
+$font-md: 14px * $hd;
+$font-lg: 16px * $hd;
+$font-xl: 18px * $hd;
 
 // 行高
 $line-height-xs: 14px * $hd;
 $line-height-sm: 18px * $hd;
 $line-height-md: 20px * $hd;
 $line-height-lg: 22px * $hd;
+$line-height-xl: 24px * $hd;
 
 // 字体族
 $base-font-family: var(
@@ -121,4 +124,5 @@ $border-width-base: 1px * $hd;
 $border-radius-sm: 2px * $hd;
 $border-radius-md: 4px * $hd;
 $border-radius-lg: 8px * $hd;
+$border-radius-xl: 10px * $hd;
 $border-radius-max: 999px;

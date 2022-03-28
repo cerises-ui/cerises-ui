@@ -81,7 +81,7 @@ export default (props: ButtonProps) => {
     <>
       <button
         disabled={props.disabled}
-        class={`c-button${props.class ? ' ' + props.class : ''}`}
+        class={`xs c-button${props.class ? ' ' + props.class : ''}`}
         style={cssVars()}
       >
         {props.children}

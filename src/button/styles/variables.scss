@@ -15,20 +15,37 @@ $button-line-height: var(--button-line-height, 1.2);
 
 // 大小
 // xs
-$button-xs-height: 24px * $hd;
-$button-xs-padding: 0 var(--padding-base, $padding-base);
-$button-xs-font-size: var(--font-size-xs, $font-size-xs);
+%xs {
+  $button-xs-height: var(--button-xs-height, 24px * $hd);
+  $button-xs-padding: 0 var(--button-padding-xs, $padding-xs);
+  $button-xs-font-size: var(--button-font-xs, $font-xs);
+}
 
 // sm
-$button-sm-height: 32px * $hd;
-$button-sm-padding: 0 var(--padding-xs, $padding-xs);
-$button-sm-font-size: var(--font-size-sm, $font-size-sm);
+%sm {
+  $button-sm-height: var(button-sm-height, 32px * $hd);
+  $button-sm-padding: 0 var(--padding-xs, $padding-xs);
+  $button-sm-font-size: var(--font-size-sm, $font-sm);
+}
 
 // md
-$button-md-height: 44px * $hd;
-$button-md-padding: 0 var(--padding-md, $padding-md);
-$button-md-font-size: var(--font-size-md, $font-size-md);
+%md {
+  $button-md-height: var(button-md-height, 44px * $hd);
+  $button-md-padding: 0 var(--padding-md, $padding-md);
+  $button-md-font-size: var(--font-size-md, $font-md);
+}
 
 // lg
-$button-lg-height: 50px * $hd;
-$button-lg-font-size: var(--font-size-lg, $font-size-lg);
+%lg {
+  $button-lg-height: var(button-lg-height, 50px * $hd);
+  $button-lg-padding: 0 var(--padding-lg, $padding-lg);
+  $button-lg-font-size: var(--font-size-lg, $font-lg);
+}
+
+// xl
+%xl {
+  $button-xl-height: var(button-xl-height, 64px * $hd);
+  $button-xl-padding: 0 var(--padding-xl, $padding-xl);
+  $button-xl-font-size: var(--font-size-xl, $font-xl);
+}
+
