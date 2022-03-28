@@ -1,22 +1,25 @@
+@import './variables.scss';
+
 .c-button {
   position: relative;
   @apply px-2.5 py-1.5;
 
-  background-color: var(--c-button-background);
-  cursor: var(--c-button-cursor);
-  color: var(--c-button-color);
+  background-color: $button-background;
+  cursor: $button-cursor;
+  color: $button-color;
 
-  border-width: var(--c-button-border-width);
-  border-color: var(--c-button-border-color);
-  border-radius: var(--c-button-border-radius);
+  border-width: $border-width;
+  border-color: $border-color;
+  border-radius: $border-radius;
 
-  transition: color 0.2s, background-color 0.2s, opacity 0.2s, border-color 0.2s;
+  transition: filter 0.2s, background-color 0.2s, opacity 0.2s,
+    border-color 0.2s;
   &:not([disabled]) {
     &:hover {
-      background-color: var(--c-button-background-hover);
+      filter: brightness(1.1);
     }
     &:active {
-      background-color: var(--c-button-background-pressed);
+      filter: brightness(0.7);
     }
   }
 }

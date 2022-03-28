@@ -1,0 +1,34 @@
+@import '../../styles/variables.scss';
+
+// 按钮基本色
+$button-background: var(--button-background, $white);
+$button-color: var(--button-color，$primary-text);
+
+// 边框
+$border-width: var(--button-border-width, 1px);
+$border-color: var(--button-border-color, $border-color);
+$border-radius: var(--button-border-radius, $border-radius-sm);
+
+// cursor
+$button-cursor: var(--button-cursor, pointer);
+$button-line-height: var(--button-line-height, 1.2);
+
+// 大小
+// xs
+$button-xs-height: 24px * $hd;
+$button-xs-padding: 0 var(--padding-base, $padding-base);
+$button-xs-font-size: var(--font-size-xs, $font-size-xs);
+
+// sm
+$button-sm-height: 32px * $hd;
+$button-sm-padding: 0 var(--padding-xs, $padding-xs);
+$button-sm-font-size: var(--font-size-sm, $font-size-sm);
+
+// md
+$button-md-height: 44px * $hd;
+$button-md-padding: 0 var(--padding-md, $padding-md);
+$button-md-font-size: var(--font-size-md, $font-size-md);
+
+// lg
+$button-lg-height: 50px * $hd;
+$button-lg-font-size: var(--font-size-lg, $font-size-lg);
