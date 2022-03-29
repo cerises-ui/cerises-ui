@@ -1,8 +1,28 @@
 @import './variables.scss';
 
-.c-button {
+%button-base {
+  // reset
   position: relative;
-  @apply px-2.5 py-1.5;
+  display: inline-block;
+  box-sizing: border-box;
+
+  // webkit不变色
+  -webkit-tap-highlight-color: transparent;
+
+  // 不选中文字
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-appearance: none;
+  -webkit-font-smoothing: auto;
+}
+
+.c-button {
+  @extend %button-base;
 
   background-color: $button-background;
   color: $button-color;
@@ -11,17 +31,8 @@
   border-radius: $border-radius;
   cursor: $button-cursor;
 
-  transition: filter 0.2s, background-color 0.2s, opacity 0.2s,
+  transition: filter 0.2s ease-out, background-color 0.2s, opacity 0.2s,
     border-color 0.2s;
-
-  $sizes: 'xs', 'sm', 'md', 'lg', 'xl';
-
-  @each $s in $sizes {
-    $size: index($sizes, $s);
-    &.#{$s} {
-      @extend #{$s};
-    }
-  }
 
   &.xs {
     height: $button-xs-height;
@@ -47,17 +58,23 @@
     font-size: $button-lg-font-size;
   }
 
-  &.xs {
-    height: $button-xs-height;
-    padding: $button-xs-padding;
-    font-size: $button-xs-font-size;
+  &.xl {
+    height: $button-xl-height;
+    padding: $button-xl-padding;
+    font-size: $button-xl-font-size;
   }
 
-  &.xs {
-    height: $button-xs-height;
-    padding: $button-xs-padding;
-    font-size: $button-xs-font-size;
-  }
+  // &.xs {
+  //   height: $button-xs-height;
+  //   padding: $button-xs-padding;
+  //   font-size: $button-xs-font-size;
+  // }
+
+  // &.xs {
+  //   height: $button-xs-height;
+  //   padding: $button-xs-padding;
+  //   font-size: $button-xs-font-size;
+  // }
 
   &:not([disabled]) {
     &:hover {

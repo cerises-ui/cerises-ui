@@ -2,7 +2,7 @@
 
 # cerises-ui
 
-一个现代的基于 solidjs 的 UI 库~它是非常轻量级的!
+一个 Solidjs 的 组件库~
 
 ![visitors](https://visitor-badge.deta.dev/badge?page_id=cerises-ui)
 
