@@ -10,9 +10,6 @@
   border-radius: $border-radius;
   cursor: $button-cursor;
 
-  // transition: filter 0.2s ease-out, background-color 0.2s ease-out,
-  //   opacity 0.2s ease-out, border-color 0.2s ease-out;
-
   & {
     height: $button-md-height;
     padding: $button-md-padding;
@@ -20,9 +17,9 @@
   }
 
   &[size='xs'] {
-    height: $button-xs-height;
-    padding: $button-xs-padding;
-    font-size: $button-xs-font-size;
+    height: $button-md-height;
+    padding: $button-md-padding;
+    font-size: $button-md-font-size;
   }
 
   &[size='sm'] {
