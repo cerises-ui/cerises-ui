@@ -12,7 +12,7 @@ import CCard from '@/card';
 按钮的 `type` 分别为 `default`、`primary`、`info`、`success`、`warning` 和 `error`。
 
   <CButton>Default</CButton>
-  <CButton type="primary" size="lg"> Primary </CButton>
+  <CButton type="primary"> Primary </CButton>
   <CButton type="info">Info</CButton>
   <CButton type="success">Success</CButton>
   <CButton type="warning">Warning</CButton>
@@ -29,4 +29,26 @@ import CCard from '@/card';
   <CButton disabled success>Success</CButton>
   <CButton disabled warning>Warning</CButton>
   <CButton disabled error>Error</CButton>
+</CCard>
+
+<CCard class="mt-4 space-x-2 space-y-2" title="大小">
+
+`xs`、`sm`、`md`、`lg` 和 `xl` 分别对应超级小、小、中、大、超大的按钮。
+
+  <CButton size="xs">Default</CButton>
+  <CButton size="sm">Primary</CButton>
+  <CButton size="md">Info</CButton>
+  <CButton size="lg">Success</CButton>
+  <CButton size="xl">Warning</CButton>
+</CCard>
+
+<CCard class="mt-4 space-x-2 space-y-2" title="朴素按钮">
+
+给按钮设置 `plain`
+
+  <CButton plain style={{"--button-background":"#2bc998"}}>Default</CButton>
+  <CButton plain>Primary</CButton>
+  <CButton size="md">Info</CButton>
+  <CButton size="lg">Success</CButton>
+  <CButton size="xl">Warning</CButton>
 </CCard>

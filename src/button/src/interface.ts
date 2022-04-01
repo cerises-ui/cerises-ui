@@ -55,7 +55,7 @@ export type ButtonType =
   | 'error'
   | 'info';
 
-export type ButtonSize = 'small' | 'mini';
+export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type ButtonOnClickHandler = (event: MouseEvent) => void;
 

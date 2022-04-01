@@ -8,7 +8,10 @@ export default (props: ButtonProps) => {
     <>
       <button
         class={`c-button${props.class ? ' ' + props.class : ''}`}
+        style={props.style}
         size={props.size}
+        type={props.type}
+        plain={props.plain}
         disabled={props.disabled}
       >
         {props.children}

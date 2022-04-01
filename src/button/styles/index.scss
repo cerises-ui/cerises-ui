@@ -17,9 +17,9 @@
   }
 
   &[size='xs'] {
-    height: $button-md-height;
-    padding: $button-md-padding;
-    font-size: $button-md-font-size;
+    height: $button-xs-height;
+    padding: $button-xs-padding;
+    font-size: $button-xs-font-size;
   }
 
   &[size='sm'] {
@@ -46,6 +46,45 @@
     font-size: $button-xl-font-size;
   }
 
+  &[type='primary'] {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white;
+  }
+
+  &[type='info'] {
+    background-color: $info-color;
+    border-color: $info-color;
+
+    color: $white;
+  }
+
+  &[type='success'] {
+    background-color: $success-color;
+    border-color: $success-color;
+
+    color: $white;
+  }
+
+  &[type='warning'] {
+    background-color: $warning-color;
+    border-color: $warning-color;
+
+    color: $white;
+  }
+
+  &[type='error'] {
+    background-color: $error-color;
+    border-color: $error-color;
+    color: $white;
+  }
+
+  &[plain] {
+    background-color: $white;
+    border-color: $button-background;
+    color: $button-background;
+  }
+
   &:not([disabled]) {
     &:active {
       filter: brightness(0.9);
@@ -53,7 +92,7 @@
   }
 
   &[disabled] {
-    filter: brightness(0.5);
+    filter: brightness(0.9);
     cursor: not-allowed;
   }
 }

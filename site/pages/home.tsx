@@ -27,7 +27,9 @@ export default () => {
         </span>
 
         <div class="space-x-6">
-          <Button type="primary" size="xl">开始</Button>
+          <Button type="primary" size="xl">
+            开始
+          </Button>
           <Button>了解更多</Button>
         </div>
       </main>
