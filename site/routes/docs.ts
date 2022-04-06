@@ -15,6 +15,10 @@ export default {
           path: 'card',
           component: lazy(() => import('docs/components/card.mdx')),
         },
+        {
+          path: 'tabs',
+          component: lazy(() => import('docs/components/tabs.mdx')),
+        },
       ],
     },
     {
