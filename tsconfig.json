@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "types": ["vite/client"],
+    "typeRoots": ["src/types"],
     "noEmit": true,
     "isolatedModules": true
   }

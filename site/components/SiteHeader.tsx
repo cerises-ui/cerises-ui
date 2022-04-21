@@ -1,4 +1,4 @@
-import logo from 'site/public/logo.png';
+import logo from 'site/assets/cerises.svg';
 import './SiteHeader.scss';
 
 export default () => {

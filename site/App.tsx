@@ -3,7 +3,7 @@ import { useRoutes, useLocation } from 'solid-app-router';
 import { routes } from './routes';
 import './styles/index.scss';
 
-import SiteHeader from 'site/layout/SiteHeader';
+import SiteHeader from 'site/components/SiteHeader';
 
 const App: Component = () => {
   const location = useLocation();

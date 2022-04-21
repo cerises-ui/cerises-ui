@@ -1,4 +1,4 @@
-import logo from 'site/public/logo.png';
+import logo from 'site/assets/cerises.svg';
 import Tag from '@/tag';
 import Button from '@/button';
 
@@ -6,7 +6,8 @@ export default () => {
   return (
     <>
       <main class="flex flex-col justify-center items-center space-y-6 mt-4">
-        <img src={logo} alt="" />
+        <img src={logo} class="w-60 h-60" alt="logo" />
+
         <div class="relative flex items-start space-x-4">
           <h1 class="text-5xl font-bold sm:2xl">CerisusUi 官方文档</h1>
           <div
@@ -18,18 +19,17 @@ export default () => {
             </Tag>
           </div>
         </div>
+
         <span class="text-xl text-gray-500">
           一个基于{' '}
           <span class="px-2 py-1 bg-gray-200 rounded text-black font-bold">
             SolidJS
           </span>{' '}
-          的高性能轻量级组件库
+          的轻量级移动端组件库
         </span>
 
         <div class="space-x-6">
-          <Button type="primary" size="xl">
-            开始
-          </Button>
+          <Button type="primary">开始</Button>
           <Button>了解更多</Button>
         </div>
       </main>
