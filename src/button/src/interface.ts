@@ -1,8 +1,8 @@
+import { JSX } from 'solid-js';
 import { ThemeButtonVars } from '../styles/light';
-import { PropsWithChildren } from 'solid-js';
 
 export type ButtonProps = GlobalProps &
-  PropsWithChildren & {
+  JSX.HTMLAttributes<HTMLButtonElement> & {
     theme?: ThemeButtonVars;
     /**
      * 按钮类型 button type
